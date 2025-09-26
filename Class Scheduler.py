@@ -85,16 +85,17 @@ class Class:
             if int(seg) > int(current_time) & int(seg) > int(want):
                 want = seg
 
-        for ind, value in enumerate(timez):
-            if want == value:
-                index = ind
-                break
-
         if index == 77:
             print()
             print("There are no more classes for the day.")
             print()
         else:
+            
+            for ind, value in enumerate(timez):
+                if want == value:
+                    index = ind
+                    break
+                
             i = datetime.strptime(timez[index],"%H%M")
             o = i.strftime("%I:%M %p")  
             print()
