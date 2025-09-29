@@ -7,7 +7,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 json_path = os.path.join(script_dir,"Classes.json")
 
 current_day = datetime.now().strftime("%A")
-current_time = datetime.now().strftime("%H%M")
+current_time = 2000
 
 Classes = {}
 
@@ -80,22 +80,22 @@ class Class:
         index = 77
         want = "0"
         sort = np.sort(timez)
+        check = False
         
         for seg in sort:
-            if int(seg) > int(current_time) & int(seg) > int(want):
+            if int(seg) > int(current_time) and int(seg) > int(want):
                 want = seg
+                check = True
+            
+        for ind, value in enumerate(timez):
+            if want == value:
+                index = ind
 
-        if index == 77:
+        if check == False:
             print()
             print("There are no more classes for the day.")
             print()
         else:
-            
-            for ind, value in enumerate(timez):
-                if want == value:
-                    index = ind
-                    break
-                
             i = datetime.strptime(timez[index],"%H%M")
             o = i.strftime("%I:%M %p")  
             print()
