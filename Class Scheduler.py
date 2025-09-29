@@ -7,7 +7,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 json_path = os.path.join(script_dir,"Classes.json")
 
 current_day = datetime.now().strftime("%A")
-current_time = datetime.now()strftime("%H%M")
+current_time = datetime.now().strftime("%H%M")
 
 Classes = {}
 
@@ -163,4 +163,5 @@ while True:
 exit()
 
     # Class Scheduler by Noah Palmer
+
 
