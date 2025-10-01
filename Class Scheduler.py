@@ -86,6 +86,7 @@ class Class:
             if int(seg) > int(current_time) and int(seg) > int(want):
                 want = seg
                 check = True
+                break
             
         for ind, value in enumerate(timez):
             if want == value:
@@ -163,5 +164,3 @@ while True:
 exit()
 
     # Class Scheduler by Noah Palmer
-
-
