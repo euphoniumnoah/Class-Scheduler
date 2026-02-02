@@ -29,7 +29,6 @@ class Class:
         newclass = Class(name, loc)
         Classes[name] = newclass
 
-        days = []
         while True:
             day = input("Add a day such as 'Monday', type continue when done: ")
             if day.lower() == "continue":
@@ -37,7 +36,6 @@ class Class:
             else:
                 newclass.days.append(day)
 
-        times = []
         while True:
             time1 = input("Add the start time in military format. (e.g. 1307 = 1:07): ")
             time2 = input("Add the end time in military format. (e.g. 1307 = 1:07): ")
@@ -165,4 +163,5 @@ while True:
 exit()
 
     # Class Scheduler by Noah Palmer
+
 
