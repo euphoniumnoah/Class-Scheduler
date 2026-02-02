@@ -44,6 +44,7 @@ class Class:
             print()
             newclass.times.append(time1)
             newclass.times.append(time2)
+            break
             
     def remove_class(_dict, name):
 
@@ -164,3 +165,4 @@ while True:
 exit()
 
     # Class Scheduler by Noah Palmer
+
